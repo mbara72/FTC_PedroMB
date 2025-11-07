@@ -7,8 +7,8 @@ import org.firstinspires.ftc.robotcore.external.Telemetry;
 import org.firstinspires.ftc.robotcore.external.navigation.DistanceUnit;
 
 public class TestColorDistanceSensor extends TestItem {
-    private ColorSensor colorSensor;
-    private DistanceSensor distanceSensor;
+    private final ColorSensor colorSensor;
+    private final DistanceSensor distanceSensor;
 
     public TestColorDistanceSensor(String description,
                                    ColorSensor colorSensor,
@@ -21,7 +21,9 @@ public class TestColorDistanceSensor extends TestItem {
     @Override
     public void run(boolean on, Telemetry telemetry){
         telemetry.addData("Amount Red", colorSensor.red());
+        telemetry.addData("Amount Green", colorSensor.green());
         telemetry.addData("Amount Blue", colorSensor.blue());
+        telemetry.addData("Amount Alpha", colorSensor.alpha());
         telemetry.addData("Distance (CM)", distanceSensor.getDistance(DistanceUnit.CM));
         telemetry.addData("Distance(IN)", distanceSensor.getDistance(DistanceUnit.INCH));
     }

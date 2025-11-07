@@ -99,10 +99,11 @@ public class ProgrammingBoard1 {
     public int getAmountRed() {
         return colorSensor.red();
     }
-
+    public int getAmountGreen() { return colorSensor.green(); }
     public int getAmountBlue() {
         return colorSensor.blue();
     }
+    public int getAmountAlpha() {return colorSensor.alpha(); }
 
     public double getDistance(DistanceUnit du) {
         return distanceSensor.getDistance(du);
